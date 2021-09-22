@@ -1,0 +1,9 @@
+LinkedIn last week open sourced DynoYARN, a key piece of technology that allows it to predict how appliacation performance will be impacted as it scales Hadoop to gargantuan proportions, including one 10,000-node cluster that may well be the biggest Hadoop implementation on the planet.
+
+Hadoop may not be in the news much anymore, but it’s still chugging away behind the scenes at places like LinkedIn, which has bet heavily on the technology and continues to use it as the basis for its big data analytics and machine learning workloads.
+
+LinkedIn essentially doubles the size of its Hadoop clusters every year to keep up with the exponential rate of data growth, according to a LinkedIn blog post last week by a quartet of company engineers, Keqiu Hu, Jonathan Hung, Haibo Chen, and Sriram Rao.
+
+The company, which has been very active in the open source Hadoop community, long ago had to deal with the limitations in the Hadoop Distributed File System (HDFS), and in particular the NameNode. But it didn’t have a reason yet to do anything with YARN (Yet Another Resource Negotiator), which schedules the execution of jobs on the cluster.
+
+But when LinkedIn recently decided to merge the compute nodes of two clusters, one that served mainline traffic, and another that was used for data obfuscation, cracks started to appear in YARN. Some jobs could face several hours of delay before they were scheduled, even though there was plenty of capacity on the cluster.
